@@ -11,7 +11,7 @@
   width: 100%;
 
   .form {
-    padding: 48px;
+    padding: 36px;
 
     @include small-screen {
       padding: 24px;
@@ -29,7 +29,7 @@
       }
 
       .text-input {
-        width: 350px;
+        width: 320px;
         border: 1px solid $text-light-gray;
         border-radius: 6px;
         margin-bottom: 12px;
@@ -42,7 +42,7 @@
     }
 
     .error-message {
-      width: 350px;
+      width: 320px;
       color: red;
     }
 

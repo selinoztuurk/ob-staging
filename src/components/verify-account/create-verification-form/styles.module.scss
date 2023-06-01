@@ -33,9 +33,10 @@
 
         &.header-title {
           font-size: 24px;
-          font-weight: 600;
           margin-bottom: 12px;
           color: $ob-purple;
+
+          @include font-weight(bold);
         }
       }
     }
@@ -83,8 +84,9 @@
       }
 
       .label {
-        font-weight: 600;
         margin-bottom: 6px;
+
+        @include font-weight(bold);
       }
 
       .icon {
@@ -120,9 +122,10 @@
 
     .link {
       margin-left: 6px;
-      font-weight: 600;
       text-decoration: underline;
       color: $ob-purple;
+
+      @include font-weight(bold);
     }
 
     .warnings {
@@ -143,8 +146,9 @@
 
     li {
       list-style-type: circle;
-      @include font-weight(bold);
       margin-left: 6px;
+
+      @include font-weight(bold);
     }
   }
 }
