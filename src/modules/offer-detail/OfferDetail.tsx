@@ -11,13 +11,13 @@ import BrandInfo from 'components/offer-detail/brand-info/BrandInfo';
 import DiscountInfo from 'components/offer-detail/discount-info/DiscountInfo';
 import OfferInfo from 'components/offer-detail/offer-info/OfferInfo';
 import OfferButtons from 'components/offer-detail/offer-buttons/OfferButtons';
+import ComponentLoading from 'components/loading/ComponentLoading';
 
 const OfferDetail = (): JSX.Element => {
   const { slug } = useParams();
 
-  const { data: offerDetail } = OfferApi.useFetchOfferDetailsBySlugQuery(
-    slug || ''
-  );
+  const { data: offerDetail, isLoading: showLoading } =
+    OfferApi.useFetchOfferDetailsBySlugQuery(slug || '');
 
   const renderContent = (offerDetail: OfferDetailType): JSX.Element => (
     <div className={styles['offer-detail-page']}>
@@ -77,7 +77,9 @@ const OfferDetail = (): JSX.Element => {
     </div>
   );
 
-  return (
+  return showLoading ? (
+    <ComponentLoading />
+  ) : (
     <>
       <div className="page-title-container">
         <h1 className="page-title">{offerDetail?.title}</h1>

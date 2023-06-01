@@ -1,4 +1,4 @@
-const PageLoading = () => {
+const ComponentLoading = (): JSX.Element => {
   return (
     <div className="page-container text-center">
       <div role="status">
@@ -24,4 +24,4 @@ const PageLoading = () => {
   );
 };
 
-export default PageLoading;
+export default ComponentLoading;

@@ -1,7 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 
-import Loading from 'components/loading/Loading';
+import PageLoading from 'components/loading/PageLoading';
 import MainLayout from 'components/layout/MainLayout';
 
 import paths from 'routing/Paths';
@@ -33,7 +33,7 @@ interface Routes {
 }
 
 const getRouteElement = (Component: React.ElementType): React.ReactNode => (
-  <Suspense fallback={<Loading />}>
+  <Suspense fallback={<PageLoading />}>
     <MainLayout>
       <Component />
     </MainLayout>

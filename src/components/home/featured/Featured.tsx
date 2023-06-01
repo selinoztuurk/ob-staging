@@ -1,16 +1,18 @@
 import styles from 'components/home/featured/styles.module.scss';
 
 import OfferCard from 'components/common/offer-card/OfferCard';
+import ComponentLoading from 'components/loading/ComponentLoading';
 
 import OfferApi, { Offer } from 'api/endpoints/OfferApi';
 
 import i18n from 'common/i18n/i18n';
 
 const Featured = () => {
-  const { data: offers } = OfferApi.useFetchFeaturedOffersQuery({
-    paginate: 6,
-    page: 1,
-  });
+  const { data: offers, isLoading: showLoading } =
+    OfferApi.useFetchFeaturedOffersQuery({
+      paginate: 6,
+      page: 1,
+    });
 
   const renderFeaturedList = (offerList: Offer[]): JSX.Element => {
     return (
@@ -30,7 +32,11 @@ const Featured = () => {
       <div className={`home-component-subtitle ${styles.subtitle}`}>
         {i18n.t('featured_subtitle')}
       </div>
-      {offers && renderFeaturedList(offers)}
+      {showLoading ? (
+        <ComponentLoading />
+      ) : (
+        <>{offers && renderFeaturedList(offers)}</>
+      )}
     </div>
   );
 };
