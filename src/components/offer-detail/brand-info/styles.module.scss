@@ -1,0 +1,27 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.brand-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .brand-logo {
+    border-radius: 6px;
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+
+    @include box-shadow;
+  }
+
+  .brand-name {
+    margin-left: 12px;
+    text-align: left;
+
+    @include font-weight(bold);
+  }
+}

@@ -1,0 +1,63 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.info {
+  display: flex;
+
+  .column {
+    margin: 12px;
+
+    .picture {
+      height: 36px;
+      width: 36px;
+
+      color: $ob-purple;
+      background-color: $ob-yellow;
+      border-radius: 18px;
+    }
+
+    .verified-icon {
+      color: $text-green;
+      margin-left: 12px;
+    }
+
+    .text-row {
+      display: flex;
+      align-items: center;
+
+      @include set-font(16px);
+
+      color: $ob-purple;
+
+      &.bold {
+        @include font-weight(bold);
+      }
+    }
+  }
+}
+
+.checklist {
+  display: flex;
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 33%;
+    padding: 12px;
+    margin: 12px;
+
+    border-radius: 6px;
+    @apply bg-gray-200;
+
+    &.active {
+      @apply bg-purple-200;
+
+      color: $ob-purple;
+    }
+  }
+}

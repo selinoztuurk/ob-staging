@@ -1,0 +1,12 @@
+@import '/src/common/styles/colors';
+@import '/src/common/styles/fonts';
+
+.dropdown-button {
+  display: inline-flex;
+  color: $ob-purple;
+  margin-left: 12px;
+  justify-content: center;
+  align-items: center;
+
+  @include font-weight(bold);
+}

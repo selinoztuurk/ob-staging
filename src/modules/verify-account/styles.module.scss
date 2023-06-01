@@ -1,0 +1,30 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.verify-account-page {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+
+  @include small-screen {
+    flex-direction: column;
+  }
+
+  .column {
+    .title-container {
+      @include font-weight(bold);
+
+      .icon {
+        margin-top: 32px;
+        color: $ob-purple;
+      }
+    }
+
+    .text {
+      margin: 32px 0;
+    }
+  }
+}

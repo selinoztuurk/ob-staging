@@ -1,0 +1,8 @@
+@import '/src/common/styles/fonts';
+@import '/src/common/styles/common';
+
+.layout {
+  display: block;
+
+  @include set-font();
+}

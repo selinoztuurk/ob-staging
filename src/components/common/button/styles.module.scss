@@ -1,0 +1,69 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+  @apply p-2 rounded-full;
+
+  &.full-width {
+    flex: 1;
+  }
+
+  &.button-purple {
+    background-color: $ob-purple;
+
+    @apply text-white;
+  }
+
+  &.button-purple:hover {
+    @apply bg-purple-600;
+  }
+
+  &.button-yellow {
+    background-color: $ob-yellow;
+    color: $ob-purple;
+  }
+
+  &.button-yellow:hover {
+    @apply bg-amber-300;
+  }
+
+  &.button-red {
+    background-color: $text-red;
+    color: $ob-purple;
+
+    @apply text-white;
+  }
+
+  &.button-red:hover {
+    @apply bg-red-300;
+  }
+
+  &.disabled {
+    background-color: $text-light-gray;
+
+    &:hover {
+      background-color: $text-light-gray;
+    }
+  }
+
+  .icon-container {
+    display: flex;
+    padding: 3px;
+    font-size: 16px;
+  }
+
+  .text-container {
+    padding: 3px;
+    font-size: 16px;
+    @include font-weight(bold);
+  }
+}

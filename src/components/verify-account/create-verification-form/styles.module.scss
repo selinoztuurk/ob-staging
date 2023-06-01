@@ -1,0 +1,150 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.create-verification-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 100%;
+
+  .form {
+    padding: 24px;
+
+    @include small-screen {
+      padding: 24px;
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
+      margin-bottom: 16px;
+
+      .header-row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+
+        &.header-title {
+          font-size: 24px;
+          font-weight: 600;
+          margin-bottom: 12px;
+          color: $ob-purple;
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      max-width: 500px;
+
+      @include small-screen {
+        flex-direction: column;
+      }
+
+      .column {
+        flex: auto;
+        padding: 12px;
+      }
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .text-input {
+        border: 1px solid $text-light-gray;
+        border-radius: 6px;
+        margin-bottom: 12px;
+        padding: 6px;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $ob-purple;
+        }
+      }
+
+      .radio-option {
+        margin-right: 12px;
+
+        input {
+          margin-right: 6px;
+
+          @apply text-purple-900  rounded;
+        }
+      }
+
+      .label {
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      .icon {
+        position: absolute;
+        right: 28px;
+        top: 54px;
+      }
+    }
+
+    .info-message {
+      color: $text-blue;
+    }
+
+    .error-message {
+      color: $text-red;
+    }
+
+    .terms-container {
+      display: flex;
+      align-items: center;
+
+      .checkbox {
+        margin-right: 6px;
+
+        @apply text-purple-900  rounded;
+      }
+    }
+
+    .button-container {
+      display: flex;
+      margin-top: 12px;
+    }
+
+    .link {
+      margin-left: 6px;
+      font-weight: 600;
+      text-decoration: underline;
+      color: $ob-purple;
+    }
+
+    .warnings {
+      padding: 12px;
+      border-radius: 6px;
+      background-color: $bg-light-red;
+    }
+
+    .accepted {
+      padding: 12px;
+      border-radius: 6px;
+      background-color: $bg-light-blue;
+    }
+
+    .text {
+      margin: 12px 0;
+    }
+
+    li {
+      list-style-type: circle;
+      @include font-weight(bold);
+      margin-left: 6px;
+    }
+  }
+}

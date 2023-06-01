@@ -1,0 +1,108 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.footer {
+  background-color: $ob-purple;
+  color: $text-light-gray;
+  font-size: 14px;
+  z-index: $footer-z-index;
+  line-height: 1.5;
+
+  .footer-content {
+    @include commmon-page-constraint;
+
+    .title {
+      @include font-weight(bold);
+      margin-bottom: 12px;
+    }
+
+    .info {
+      display: flex;
+      gap: 24px;
+      padding: 24px 0;
+
+      @include small-screen {
+        flex-direction: column;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &.left-aligned {
+          align-items: flex-end;
+
+          @include small-screen {
+            align-items: flex-start;
+          }
+        }
+
+        .about {
+          margin-top: 24px;
+        }
+
+        .logo {
+          height: 48px;
+          filter: grayscale(200) brightness(300);
+          align-self: flex-start;
+        }
+      }
+    }
+
+    .social {
+      .social-icons {
+        display: flex;
+        flex-direction: row;
+
+        .icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 12px;
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-top: 24px;
+      padding: 24px 0 48px;
+      justify-content: space-between;
+      border-top: 1px solid $text-light-gray;
+      font-size: 12px;
+
+      @include large-screen {
+        flex-direction: row;
+      }
+
+      .copyright {
+        margin: 6px 0;
+
+        @include large-screen {
+          flex-direction: row;
+        }
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+
+        @include large-screen {
+          flex-direction: row;
+        }
+
+        .link {
+          margin: 6px 0;
+
+          @include large-screen {
+            margin-left: 18px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import '/src/common/styles/reset';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/common';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $header-z-index;
+  background-color: $ob-yellow;
+
+  .header-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include commmon-page-constraint;
+
+    .header-column {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .link {
+        display: inline-flex;
+        color: $ob-purple;
+        margin-left: 12px;
+
+        @include font-weight(bold);
+      }
+
+      .logo {
+        height: 48px;
+
+        @include small-screen {
+          display: none;
+        }
+
+        &.small {
+          width: 64px;
+          display: none;
+
+          @include small-screen {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

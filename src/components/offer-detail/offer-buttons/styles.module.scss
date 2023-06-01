@@ -1,0 +1,14 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.offer-buttons-container {
+  display: flex;
+  flex-direction: row;
+
+  .margin-helper {
+    width: 12px;
+  }
+}

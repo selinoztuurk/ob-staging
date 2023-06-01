@@ -1,0 +1,74 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+
+.forgot-password-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 100%;
+
+  .form {
+    padding: 48px;
+
+    @include small-screen {
+      padding: 24px;
+    }
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
+
+      .text-input {
+        width: 350px;
+        border: 1px solid $text-light-gray;
+        border-radius: 6px;
+        margin-bottom: 12px;
+
+        &:focus {
+          outline: none;
+          border: 1px solid $ob-purple;
+        }
+      }
+    }
+
+    .error-message {
+      width: 350px;
+      color: red;
+    }
+
+    .remember-me-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .checkbox {
+        margin-right: 6px;
+
+        @apply text-purple-900  rounded;
+      }
+    }
+
+    .button-container {
+      display: flex;
+      margin-top: 12px;
+    }
+
+    .forgot-password-container {
+      display: flex;
+      justify-content: center;
+      color: $ob-purple;
+      text-decoration: underline;
+      margin-top: 12px;
+    }
+  }
+}

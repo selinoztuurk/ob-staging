@@ -1,0 +1,5 @@
+@import '/src/common/styles/fonts';
+
+.modal {
+  @include set-font(regular);
+}

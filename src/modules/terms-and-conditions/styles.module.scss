@@ -1,0 +1,21 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.terms-and-conditions-page-container {
+  text-align: start;
+
+  .paragraph {
+    width: 100%;
+
+    .bold {
+      @include font-weight(bold);
+    }
+  }
+
+  li {
+    list-style-type: disc;
+  }
+}

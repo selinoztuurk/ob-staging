@@ -1,0 +1,25 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+
+.featured-offers-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 48px 0;
+  text-align: center;
+
+  @include box-shadow;
+
+  .featured-offers-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 12px;
+
+    @include small-screen {
+      display: block;
+    }
+  }
+}

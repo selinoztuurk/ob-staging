@@ -1,0 +1,49 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.register-page {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+
+  @include small-screen {
+    margin-top: -50px;
+    flex-direction: column;
+  }
+
+  .column {
+    flex: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+
+    .title-container {
+      @include font-weight(bold);
+
+      .icon {
+        margin-top: 32px;
+        color: $ob-purple;
+      }
+    }
+
+    .text {
+      margin: 32px 32px 0 0;
+    }
+
+    .link-container {
+      width: fit-content;
+      margin-top: 32px;
+      @include font-weight(bold);
+
+      .link {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

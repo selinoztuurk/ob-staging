@@ -1,0 +1,30 @@
+$default-fontsize: 14px;
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  font-style: regular;
+  font-weight: 400;
+  src: url('/src/assets/fonts/Montserrat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Montserrat-Bold';
+  font-style: bold;
+  font-weight: 700;
+  src: url('/src/assets/fonts/Montserrat-Bold.ttf') format('truetype');
+}
+
+$font-family-base: 'Montserrat-Regular';
+
+@mixin font-weight($fontWeight) {
+  @if $fontWeight == bold {
+    font-family: 'Montserrat-Bold', sans-serif;
+  } @else if $fontWeight == regular {
+    font-family: 'Montserrat-Regular', sans-serif;
+  }
+}
+
+@mixin set-font($fontsize: $default-fontsize, $fontWeight: regular) {
+  @include font-weight($fontWeight);
+  font-size: $fontsize;
+}

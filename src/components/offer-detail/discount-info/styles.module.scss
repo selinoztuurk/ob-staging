@@ -1,0 +1,27 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.discount-info {
+  display: flex;
+  flex-direction: column;
+  color: $text-dark-gray;
+  width: 100%;
+  font-size: 14px;
+
+  .discount-info-row {
+    display: flex;
+    justify-content: space-between;
+    line-height: 2;
+
+    .bold {
+      @include font-weight(bold);
+    }
+
+    .info {
+      text-align: end;
+    }
+  }
+}

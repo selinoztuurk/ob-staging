@@ -1,0 +1,92 @@
+@import '/src/common/styles/common';
+@import '/src/common/styles/colors';
+@import '/src/common/styles/media';
+@import '/src/common/styles/z-index';
+@import '/src/common/styles/fonts';
+
+.offer-card-container {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+
+  @include medium-screen {
+    width: 48%;
+  }
+
+  @include small-screen {
+    width: 100%;
+  }
+
+  .image {
+    margin-bottom: 12px;
+    height: 220px;
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+
+    @include box-shadow;
+
+    @include small-screen {
+      height: 250px;
+    }
+  }
+
+  .categories {
+    position: relative;
+    top: 24px;
+    left: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+
+    .category {
+      color: $text-black;
+      text-align: center;
+      padding: 6px;
+      width: 100px;
+      font-size: 10px;
+      border-radius: 6px;
+      margin: 4px;
+      text-transform: uppercase;
+      background-image: linear-gradient(rgb(256 256 256 / 30%) 0 0);
+
+      @include ellipsis;
+
+      @include font-weight(bold);
+    }
+  }
+
+  .offer-card-row {
+    display: flex;
+    flex-direction: row;
+
+    .brand-logo {
+      border-radius: 6px;
+      width: 48px;
+      height: 48px;
+      object-fit: cover;
+
+      @include box-shadow;
+    }
+
+    .offer-details {
+      margin-left: 12px;
+      text-align: left;
+
+      .title {
+        font-size: 14px;
+        @include font-weight(bold);
+
+        @include large-screen {
+          width: 280px;
+
+          @include ellipsis;
+        }
+      }
+
+      .brand {
+        font-size: 12px;
+        margin-top: 6px;
+      }
+    }
+  }
+}
