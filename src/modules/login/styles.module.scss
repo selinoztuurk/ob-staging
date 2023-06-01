@@ -20,6 +20,12 @@
     flex-flow: row wrap;
     justify-items: center;
 
+    .text-content {
+      @include small-screen {
+        padding: 24px;
+      }
+    }
+
     .title-container {
       @include font-weight(bold);
 

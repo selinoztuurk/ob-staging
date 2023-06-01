@@ -23,22 +23,24 @@ const Login = (): JSX.Element => {
     <div className="page-container">
       <div className={styles['login-page']}>
         <div className={styles['column']}>
-          <div className={styles['title-container']}>
-            <FaGraduationCap className={`${styles.icon} large-icon`} />
-            <div className={'page-title'}>{i18n.t('login_title')}</div>
-          </div>
-          <div className={styles.text}>
-            {i18n.t('login_subtext1')}
-            <br />
-            {i18n.t('login_subtext2')}
-          </div>
-          <div className={styles['link-container']}>
-            <div
-              onClick={() => navigate(Paths.REGISTER)}
-              className={styles.link}
-            >
-              {i18n.t('login_register')}
-              <FaCaretRight />
+          <div className={styles['text-content']}>
+            <div className={styles['title-container']}>
+              <FaGraduationCap className={`${styles.icon} large-icon`} />
+              <div className={'page-title'}>{i18n.t('login_title')}</div>
+            </div>
+            <div className={styles.text}>
+              {i18n.t('login_subtext1')}
+              <br />
+              {i18n.t('login_subtext2')}
+            </div>
+            <div className={styles['link-container']}>
+              <div
+                onClick={() => navigate(Paths.REGISTER)}
+                className={styles.link}
+              >
+                {i18n.t('login_register')}
+                <FaCaretRight />
+              </div>
             </div>
           </div>
         </div>
